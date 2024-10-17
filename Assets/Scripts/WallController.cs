@@ -12,7 +12,7 @@ public class ConstantVelocity : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    
+
     void Update()
     {
         MoveWall();
@@ -20,6 +20,7 @@ public class ConstantVelocity : MonoBehaviour
 
     void MoveWall()
     {
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, properties.speed * -1 * Time.deltaTime * 1000);
+        Vector3 direction = new Vector3(0, 0, -1);
+        rigidbody.MovePosition(transform.position + direction * Time.deltaTime * properties.speed);
     }
 }
