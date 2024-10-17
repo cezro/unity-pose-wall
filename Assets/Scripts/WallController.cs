@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConstantVelocity : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
     [SerializeField] private WallProperties properties;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,6 @@ public class ConstantVelocity : MonoBehaviour
 
     void MoveWall()
     {
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, properties.speed * -1 * Time.deltaTime);
+        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, properties.speed * -1 * Time.deltaTime * 1000);
     }
 }
