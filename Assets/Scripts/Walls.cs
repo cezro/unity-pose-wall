@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class WallProperties : ScriptableObject
+public class Walls : ScriptableObject
 {
-    public float speed;
-    public float frequency;
+    public List<GameObject> wall;
+
 }

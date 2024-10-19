@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8830569071968440515}
   - component: {fileID: 356859527450353140}
   m_Layer: 0
-  m_Name: TestWall2
+  m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1ce741e669a794aafca864d18d1fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  properties: {fileID: 11400000, guid: 19e31e356ee2fee43a8a45dfb596b8ca, type: 2}
+  properties: {fileID: 11400000, guid: 6b4416309aad04c488001be37bca5a29, type: 2}
 --- !u!54 &8830569071968440515
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105,6 +105,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5661701078154192630}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2728abce4ffe5014a8c24440da4b03ca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2728abce4ffe5014a8c24440da4b03ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
