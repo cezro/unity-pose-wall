@@ -17,6 +17,7 @@ public class PipeServer : MonoBehaviour
     public GameObject landmarkPrefab;
     public GameObject linePrefab;
     public GameObject headPrefab;
+    public GameObject playerModel;
     public bool anchoredBody = false;
     public bool enableHead = true;
     public float multiplier = 10f;
@@ -200,6 +201,7 @@ public class PipeServer : MonoBehaviour
     private void Update()
     {
         UpdateBody(body);
+        Debug.Log(body.GetAngle(Landmark.LEFT_SHOULDER, Landmark.LEFT_HIP, Landmark.LEFT_ELBOW, Landmark.LEFT_WRIST));
     }
     private void UpdateBody(Body b)
     {
@@ -245,7 +247,7 @@ public class PipeServer : MonoBehaviour
         System.Globalization.CultureInfo.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
 
         // Open the named pipe.
-        server = new NamedPipeServerStream("UnityMediaPipeBody",PipeDirection.InOut, 99, PipeTransmissionMode.Message);
+        server = new NamedPipeServerStream("unity-pose-wall",PipeDirection.InOut, 99, PipeTransmissionMode.Message);
 
         print("Waiting for connection...");
         server.WaitForConnection();

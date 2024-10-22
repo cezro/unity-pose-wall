@@ -125,7 +125,7 @@ class BodyThread(threading.Thread):
 
                 if self.pipe==None and time.time()-self.timeSinceCheckedConnection>=1:
                     try:
-                        self.pipe = open(r'\\.\pipe\UnityMediaPipeBody', 'r+b', 0)
+                        self.pipe = open(r'\\.\pipe\unity-pose-wall', 'r+b', 0)
                     except FileNotFoundError:
                         print("Waiting for Unity project to run...")
                         self.pipe = None
