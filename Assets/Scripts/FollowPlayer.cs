@@ -5,6 +5,7 @@ public class FollowPlayer : MonoBehaviour
 {
 
     public Transform player;
+    
 
     private const float xPosition = 0;
     private const float yPosition = 8;
@@ -12,6 +13,10 @@ public class FollowPlayer : MonoBehaviour
 
     private Vector3 followTransform = new Vector3(xPosition, yPosition, zPosition);
 
+    private void Start()
+    {
+        
+    }
     void Update()
     {
         transform.position = player.transform.position + followTransform;

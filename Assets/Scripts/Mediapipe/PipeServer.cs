@@ -14,6 +14,7 @@ using UnityEngine;
 public class PipeServer : MonoBehaviour
 {
     public Transform parent;
+    public Transform playerParent;
     public GameObject landmarkPrefab;
     public GameObject linePrefab;
     public GameObject headPrefab;
@@ -24,6 +25,8 @@ public class PipeServer : MonoBehaviour
     public float landmarkScale = 1f;
     public float maxSpeed = 50f;
     public int samplesForPose = 1;
+
+    private GameObject model;
 
     private Body body;
     private NamedPipeServerStream server;
@@ -193,6 +196,7 @@ public class PipeServer : MonoBehaviour
         System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
 
         body = new Body(parent,landmarkPrefab,linePrefab,landmarkScale,enableHead?headPrefab:null);
+        model = Instantiate(playerModel, playerParent.transform);
 
         Thread t = new Thread(new ThreadStart(Run));
         t.Start();
