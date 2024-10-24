@@ -198,8 +198,8 @@ public class PipeServer : MonoBehaviour
 
         Thread t = new Thread(new ThreadStart(Run));
         t.Start();
-
     }
+
     private void Update()
     {
         UpdateBody(body);

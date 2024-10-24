@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6158684270128863453}
   - component: {fileID: 162549571937550282}
+  - component: {fileID: 8249500233038912229}
   m_Layer: 0
   m_Name: PipeServer
   m_TagString: Untagged
@@ -77,18 +78,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a15748d0c792d448e7be264dc39c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPlayerStart: {fileID: 0}
   parent: {fileID: 2666512062283934564}
-  playerParent: {fileID: 6943134730907056330}
+  angles: {fileID: 0}
   landmarkPrefab: {fileID: 4198472772038802745, guid: 04babf562887e514c8d54f7baa6122d0, type: 3}
   linePrefab: {fileID: 6873139827369952066, guid: eae423bb0132d754893def8362579dca, type: 3}
   headPrefab: {fileID: 6070663460479496251, guid: 5a29d23f117558949820469a79002572, type: 3}
-  playerModel: {fileID: 9057465895277400971, guid: 621213041425e0444aae0e320ba06eac, type: 3}
   anchoredBody: 0
   enableHead: 1
   multiplier: 10
-  landmarkScale: 1
+  landmarkScale: 0.5
   maxSpeed: 50
   samplesForPose: 1
+--- !u!114 &8249500233038912229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528068219090042616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e38b076348cc04dbcfc0174444bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ec58d8376b95ffa429821c91850ef627, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2528068219090042616}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3632739995936852127
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54369943684352672}
   - component: {fileID: 7678972302403846619}
+  - component: {fileID: 2581813652427412493}
   m_Layer: 0
   m_Name: WallSpawner
   m_TagString: Untagged
@@ -46,4 +47,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallProperties: {fileID: 11400000, guid: 6b4416309aad04c488001be37bca5a29, type: 2}
   walls: {fileID: 11400000, guid: 7a3bd4de1d4eef44cb7fa693fa90e8f5, type: 2}
-  prefab: {fileID: 5613784751505515989, guid: aa512d6e70fcb334cb3532f21d2e9d32, type: 3}
+  isActive: 1
+  wallScale: 1
+--- !u!114 &2581813652427412493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410733121002128554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e38b076348cc04dbcfc0174444bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ec58d8376b95ffa429821c91850ef627, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7678972302403846619}
+        m_TargetAssemblyTypeName: WallSpawner, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
