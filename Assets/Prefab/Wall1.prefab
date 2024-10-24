@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7626890939027274657}
   - component: {fileID: 8830569071968440515}
   - component: {fileID: 356859527450353140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,9 +149,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 2728abce4ffe5014a8c24440da4b03ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2728abce4ffe5014a8c24440da4b03ca, type: 3}
       propertyPath: m_Name
       value: wallPose1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2728abce4ffe5014a8c24440da4b03ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4083501151425157549, guid: 2728abce4ffe5014a8c24440da4b03ca, type: 3}
       propertyPath: m_LocalRotation.w

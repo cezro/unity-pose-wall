@@ -14,11 +14,10 @@ using UnityEngine;
 public class PipeServer : MonoBehaviour
 {
     public Transform parent;
-    public Transform playerParent;
+    public Angles angles;
     public GameObject landmarkPrefab;
     public GameObject linePrefab;
     public GameObject headPrefab;
-    public GameObject playerModel;
     public bool anchoredBody = false;
     public bool enableHead = true;
     public float multiplier = 10f;
@@ -196,7 +195,6 @@ public class PipeServer : MonoBehaviour
         System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
 
         body = new Body(parent,landmarkPrefab,linePrefab,landmarkScale,enableHead?headPrefab:null);
-        model = Instantiate(playerModel, playerParent.transform);
 
         Thread t = new Thread(new ThreadStart(Run));
         t.Start();
@@ -205,7 +203,6 @@ public class PipeServer : MonoBehaviour
     private void Update()
     {
         UpdateBody(body);
-        Debug.Log(body.GetAngle(Landmark.LEFT_SHOULDER, Landmark.LEFT_HIP, Landmark.LEFT_ELBOW, Landmark.LEFT_WRIST));
     }
     private void UpdateBody(Body b)
     {

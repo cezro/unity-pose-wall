@@ -20,7 +20,6 @@ public class WallSpawner : MonoBehaviour
     {
         while (true) {
             int randomIndex = UnityEngine.Random.Range(0, walls.wall.Count);
-            UnityEngine.Debug.Log(randomIndex);
             Instantiate(walls.wall[randomIndex], transform.position, Quaternion.Euler(0, 90, 0));
 
             if (wallProperties.frequency > 0)
