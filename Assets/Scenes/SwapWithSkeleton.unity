@@ -1107,7 +1107,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 566529855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2070088069}
+        m_TargetAssemblyTypeName: StartInputManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1603122711}
+        m_TargetAssemblyTypeName: WallSpawner, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &566529855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,7 +1224,7 @@ PrefabInstance:
       objectReference: {fileID: 5613784751505515989, guid: 768a9284357c6ff4f900f151fcc34dab, type: 3}
     - target: {fileID: 7678972302403846619, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7678972302403846619, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
       propertyPath: wallScale
@@ -1213,10 +1237,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8410733121002128554, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1603122709}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
 --- !u!1 &693120165
 GameObject:
@@ -1602,6 +1623,7 @@ GameObject:
   - component: {fileID: 771605522}
   - component: {fileID: 771605521}
   - component: {fileID: 771605520}
+  - component: {fileID: 771605523}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1659,6 +1681,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771605523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771605519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e38b076348cc04dbcfc0174444bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ec58d8376b95ffa429821c91850ef627, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2070088069}
+        m_TargetAssemblyTypeName: StartInputManager, Assembly-CSharp
+        m_MethodName: VisibleButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &830673342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,39 +2437,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1603122708 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8410733121002128554, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
+--- !u!114 &1603122711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7678972302403846619, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
   m_PrefabInstance: {fileID: 577877823}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1603122709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603122708}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48e38b076348cc04dbcfc0174444bc94, type: 3}
+  m_Script: {fileID: 11500000, guid: c25095d9f7d770f4f83a248799c22363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: ec58d8376b95ffa429821c91850ef627, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1713941303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +2979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070088068}
   - component: {fileID: 2070088067}
+  - component: {fileID: 2070088069}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -2988,6 +3017,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2070088069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070088066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729c102dacb3ba249a9014e581d4f6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 566529854}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

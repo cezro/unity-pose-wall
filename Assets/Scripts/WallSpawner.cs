@@ -8,7 +8,7 @@ public class WallSpawner : MonoBehaviour
     public WallProperties wallProperties;
     public Walls walls;
     private GameObject wall;
-    [SerializeField] private bool isActive = true;
+    [SerializeField] private bool isActive = false;
     [SerializeField] private float wallScale = 1f;
     private float spawnTimer = 0f;
 
