@@ -15,4 +15,4 @@ MonoBehaviour:
   wall:
   - {fileID: 5613784751505515989, guid: 768a9284357c6ff4f900f151fcc34dab, type: 3}
   - {fileID: 5613784751505515989, guid: aa512d6e70fcb334cb3532f21d2e9d32, type: 3}
-  - {fileID: 5613784751505515989, guid: c247bc675af88eb47abb50eecb31a21f, type: 3}
+  - {fileID: 5613784751505515989, guid: 5a0873339dc60a24588a9376d3ec23c3, type: 3}
