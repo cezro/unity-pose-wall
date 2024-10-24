@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Security.Principal;
 using UnityEngine;
 
 public class WallSpawner : MonoBehaviour
@@ -12,38 +10,58 @@ public class WallSpawner : MonoBehaviour
     private GameObject wall;
     [SerializeField] private bool isActive = true;
     [SerializeField] private float wallScale = 1f;
+    private float spawnTimer = 0f;
 
+    // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnWall());
-    }   
+        if (wallProperties == null || walls == null || walls.wall.Count == 0)
+        {
+            UnityEngine.Debug.LogError("WallProperties or Walls is not set or walls list is empty!");
+            isActive = false;
+        }
+    }
 
-    private IEnumerator SpawnWall()
+    // Update is called once per frame
+    void Update()
     {
-        while (isActive) {
-            int randomIndex = UnityEngine.Random.Range(0, walls.wall.Count);
-            wall = Instantiate(walls.wall[randomIndex], transform.position, Quaternion.Euler(0, 90, 0));
-            wall.transform.localScale = new Vector3(1,1.4f * wallScale ,wallScale);
-            if (wallProperties.frequency > 0)
+        if (!isActive) return;
+
+        // If frequency is set correctly, update the timer and spawn when it reaches the delay threshold
+        if (wallProperties.frequency > 0)
+        {
+            spawnTimer += Time.deltaTime;
+            float spawnInterval = 60 / wallProperties.frequency;
+
+            if (spawnTimer >= spawnInterval)
             {
-                yield return new WaitForSeconds(60 / wallProperties.frequency);
-            }
-            else
-            {
-                UnityEngine.Debug.LogWarning("Frequency is zero or negative. Skipping spawn delay.");
-                yield return null;
+                SpawnWall();
+                spawnTimer = 0f; // Reset the timer after spawning a wall
             }
         }
+        else
+        {
+            UnityEngine.Debug.LogWarning("Frequency is zero or negative. Skipping wall spawning.");
+        }
+    }
+
+    private void SpawnWall()
+    {
+        int randomIndex = UnityEngine.Random.Range(0, walls.wall.Count);
+        wall = Instantiate(walls.wall[randomIndex], transform.position, Quaternion.Euler(0, 90, 0));
+        wall.transform.localScale = new Vector3(1, 1.4f * wallScale, wallScale);
+        UnityEngine.Debug.Log("Wall spawned.");
     }
 
     public void Deactivate()
     {
         isActive = false;
+        UnityEngine.Debug.Log("Wall spawner deactivated.");
     }
 
-    public void Active()
+    public void Activate()
     {
         isActive = true;
+        UnityEngine.Debug.Log("Wall spawner activated.");
     }
-
 }
