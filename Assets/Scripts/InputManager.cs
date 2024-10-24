@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private int defaultSpeed = 150;
+    [SerializeField] private int defaultFrequency = 15;
+
     private int speed;
     private int frequency;
 
@@ -13,7 +16,11 @@ public class InputManager : MonoBehaviour
     public TMP_InputField frequencyInput;
     void Start()
     {
-        
+        wallProperties.speed = defaultSpeed;
+        wallProperties.frequency = defaultFrequency;
+        speedInput.text = defaultSpeed.ToString();
+        frequencyInput.text = defaultFrequency.ToString();
+
     }
 
     // Update is called once per frame
