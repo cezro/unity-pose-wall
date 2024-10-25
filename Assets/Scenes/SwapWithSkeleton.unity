@@ -1228,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7678972302403846619, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
       propertyPath: wallScale
-      value: 1.75
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 8410733121002128554, guid: 9a612ef86486db14c97519e6fe5331a1, type: 3}
       propertyPath: m_Name
@@ -2392,7 +2392,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 247a33b57eb2f4343904427e5bf640c8, type: 2}
+  - {fileID: 2100000, guid: 073a45a80e726944e97815fb016f2862, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2999,6 +2999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c517052d1d0ff49ae5772c01b8801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSpeed: 150
+  defaultFrequency: 15
   wallProperties: {fileID: 11400000, guid: 6b4416309aad04c488001be37bca5a29, type: 2}
   speedInput: {fileID: 693120167}
   frequencyInput: {fileID: 830673344}
