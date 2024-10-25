@@ -12,7 +12,7 @@ public class OnWallHit : MonoBehaviour
 
     
     private void OnTriggerEnter(Collider other)
-    {
+    { 
         if (other.gameObject.layer == 3)
         {
             onPlayerHit.Raise(null, null);
